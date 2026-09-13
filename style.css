@@ -119,52 +119,67 @@ body:has(> img[alt="avtor"]) > img {
     box-shadow: 0 8px 20px rgba(112, 69, 82, 0.18);
 }
 
-body:has(> div > h3) {
+.new-books-page {
     max-width: 980px;
     background: #f4d7e2;
 }
 
-body:has(> div > h3) > h1 {
+.new-books-page > h1 {
     margin-bottom: 40px;
     color: #704552;
 }
 
-body:has(> div > h3) > div {
+.new-book-card {
     display: grid;
-    grid-template-columns: 1fr 150px;
+    grid-template-columns: 1fr 110px;
     gap: 6px 28px;
     align-items: center;
-    max-width: 720px;
-    min-height: 180px;
+    max-width: 650px;
+    min-height: 155px;
     margin: 22px auto;
-    padding: 22px 26px;
+    padding: 20px 24px;
     background: #d7b39d;
     border: 1px solid rgba(112, 69, 82, 0.14);
-    border-radius: 8px;
+    border-radius: 12px;
     box-shadow: 0 8px 20px rgba(112, 69, 82, 0.1);
     box-sizing: border-box;
 }
 
-body:has(> div > h3) > div h3 {
+.new-book-card h2 {
     margin: 0;
     color: #673d4b;
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 1.35rem;
 }
 
-body:has(> div > h3) > div p {
+.new-book-card p {
     margin: 0;
     color: #674f52;
 }
 
-body:has(> div > h3) > div img {
+.new-book-card img {
     grid-column: 2;
-    grid-row: 1 / span 2;
-    width: 150px;
-    height: 190px;
+    grid-row: 1 / span 3;
+    width: 110px;
+    height: 155px;
     object-fit: cover;
-    border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(103, 61, 75, 0.16);
+    border: 4px solid #fbeaf0;
+    border-radius: 8px;
+    box-shadow: 0 6px 14px rgba(103, 61, 75, 0.22);
+    box-sizing: border-box;
+}
+
+@media (max-width: 520px) {
+    .new-book-card {
+        grid-template-columns: 1fr 90px;
+        gap: 6px 18px;
+        padding: 18px;
+    }
+
+    .new-book-card img {
+        width: 90px;
+        height: 130px;
+    }
 }
 
 .book{
