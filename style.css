@@ -1,19 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
-
 body {
     max-width: 1120px;
     margin: 0 auto;
     padding: 48px 24px 72px;
     color: #3f3035;
     background: #f6d6e4;
-    font-family: 'DM Sans', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     line-height: 1.6;
 }
 
 body > h1 {
     margin: 0 0 36px;
     color: #6f3d50;
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: clamp(2.1rem, 5vw, 3.4rem);
     line-height: 1.1;
     text-align: center;
@@ -102,7 +100,7 @@ body > a:focus-visible {
 
 .author-intro {
     color: #673d4b;
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.35rem;
     font-weight: 700;
     text-align: center;
@@ -148,7 +146,7 @@ body > a:focus-visible {
 .new-book-card h2 {
     margin: 0;
     color: #673d4b;
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: Georgia, 'Times New Roman', serif;
     font-size: 1.35rem;
 }
 
