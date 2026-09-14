@@ -1,209 +1,191 @@
 body {
-    max-width: 1120px;
-    margin: 0 auto;
-    padding: 48px 24px 72px;
-    color: #3f3035;
-    background: #f6d6e4;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
+    max-width: 1120px; /* Максимальна ширина */
+    margin: 0 auto; /* Зовнішні відступи та центрування */
+    padding: 48px 24px 72px; /* Внутрішні відступи */
+    color: #3f3035; /* Колір тексту */
+    background: #f6d6e4; /* Колір фону */
+    font-family: Arial, Helvetica, sans-serif; /* Шрифт тексту */
+    line-height: 1.6; /* Міжрядковий інтервал */
 }
 
 body > h1 {
-    margin: 0 0 36px;
-    color: #6f3d50;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: clamp(2.1rem, 5vw, 3.4rem);
-    line-height: 1.1;
-    text-align: center;
+    margin: 0 0 36px; /* Зовнішні відступи */
+    color: #6f3d50; /* Колір тексту */
+    font-family: Georgia, 'Times New Roman', serif; /* Шрифт заголовка */
+    line-height: 1.1; /* Міжрядковий інтервал */
+    text-align: center; /* Вирівнювання по центру */
 }
 
 body > p {
-    max-width: 760px;
-    margin: 18px auto 6px;
-    color: #755d66;
-    font-size: 1rem;
-    text-align: center;
+    max-width: 760px; /* Максимальна ширина */
+    margin: 18px auto 6px; /* Відступи та центрування */
+    color: #755d66; /* Колір тексту */
+    font-size: 1rem; /* Розмір шрифту */
+    text-align: center; /* Вирівнювання по центру */
 }
 
 body > a {
-    display: block;
-    width: fit-content;
-    margin: 0 auto 28px;
-    padding: 9px 22px;
-    color: #ffffff;
-    background: #8a4f63;
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(111, 61, 80, 0.16);
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: block; /* Блокове відображення */
+    width: fit-content; /* Ширина за вмістом */
+    margin: 0 auto 28px; /* Відступи та центрування */
+    padding: 9px 22px; /* Внутрішні відступи */
+    color: #ffffff; /* Колір тексту */
+    background: #8a4f63; /* Колір фону */
+    border-radius: 6px; /* Заокруглення кутів */
+    box-shadow: 0 4px 12px rgba(111, 61, 80, 0.16); /* Тінь елемента */
+    font-size: 0.9rem; /* Розмір шрифту */
+    font-weight: 600; /* Насиченість шрифту */
+    text-decoration: none; /* Без підкреслення */
 }
 
 body > a:hover,
 body > a:focus-visible {
-    color: #ffffff;
-    background: #703b50;
-    box-shadow: 0 7px 16px rgba(111, 61, 80, 0.22);
-    transform: translateY(-2px);
+    color: #ffffff; /* Колір тексту */
+    background: #703b50; /* Колір фону */
+    box-shadow: 0 7px 16px rgba(111, 61, 80, 0.22); /* Тінь елемента */
+    transform: translateY(-2px); /* Зсув угору */
 }
 
 .publisher-page {
-    max-width: 900px;
-    background: #f3d2df;
+    max-width: 900px; /* Максимальна ширина */
+    background: #f3d2df; /* Колір фону */
 }
 
 .publisher-heading {
-    margin-bottom: 28px;
-    color: #704552;
+    margin-bottom: 28px; /* Нижній відступ */
+    color: #704552; /* Колір тексту */
 }
 
 .publisher-description {
-    max-width: 820px;
-    padding: 28px 32px;
-    color: #5c4144;
-    background: #d8b69f;
-    border: 1px solid rgba(112, 69, 82, 0.14);
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(112, 69, 82, 0.1);
-    text-align: left;
+    max-width: 820px; /* Максимальна ширина */
+    padding: 28px 32px; /* Внутрішні відступи */
+    color: #5c4144; /* Колір тексту */
+    background: #d8b69f; /* Колір фону */
+    border: 1px solid rgba(112, 69, 82, 0.14); /* Рамка елемента */
+    border-radius: 8px; /* Заокруглення кутів */
+    box-shadow: 0 8px 20px rgba(112, 69, 82, 0.1); /* Тінь елемента */
+    text-align: left; /* Вирівнювання ліворуч */
 }
 
 .publisher-logo {
-    display: block;
-    max-width: min(100%, 260px);
-    height: auto;
-    margin: 32px auto 0;
-    border-radius: 8px;
+    display: block; /* Блокове відображення */
+    max-width: min(100%, 260px); /* Адаптивна максимальна ширина */
+    height: auto; /* Автоматична висота */
+    margin: 32px auto 0; /* Відступи та центрування */
+    border-radius: 8px; /* Заокруглення кутів */
 }
 
 .author-page {
-    max-width: 900px;
-    background: #f4d7e2;
+    max-width: 900px; /* Максимальна ширина */
+    background: #f4d7e2; /* Колір фону */
 }
 
 .author-heading {
-    margin-bottom: 28px;
-    color: #704552;
+    margin-bottom: 28px; /* Нижній відступ */
+    color: #704552; /* Колір тексту */
 }
 
 .author-description {
-    max-width: 760px;
-    margin: 12px auto;
-    padding: 16px 24px;
-    color: #5c4144;
-    background: #d7b39d;
-    border-left: 4px solid #8a4f63;
-    border-radius: 6px;
-    box-shadow: 0 6px 16px rgba(112, 69, 82, 0.1);
+    max-width: 760px; /* Максимальна ширина */
+    margin: 12px auto; /* Відступи та центрування */
+    padding: 16px 24px; /* Внутрішні відступи */
+    color: #5c4144; /* Колір тексту */
+    background: #d7b39d; /* Колір фону */
+    border-left: 4px solid #8a4f63; /* Ліва рамка */
+    border-radius: 6px; /* Заокруглення кутів */
+    box-shadow: 0 6px 16px rgba(112, 69, 82, 0.1); /* Тінь елемента */
 }
 
 .author-intro {
-    color: #673d4b;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 1.35rem;
-    font-weight: 700;
-    text-align: center;
+    color: #673d4b; /* Колір тексту */
+    font-family: Georgia, 'Times New Roman', serif; /* Шрифт тексту */
+    font-size: 1.35rem; /* Розмір шрифту */
+    font-weight: 700; /* Жирний шрифт */
+    text-align: center; /* Вирівнювання по центру */
 }
 
 .author-photo {
-    display: block;
-    width: min(100%, 280px);
-    height: 340px;
-    margin: 30px auto 0;
-    object-fit: cover;
-    border: 6px solid #fff1f5;
-    border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(112, 69, 82, 0.18);
+    display: block; /* Блокове відображення */
+    width: min(100%, 280px); /* Адаптивна ширина */
+    height: 340px; /* Висота */
+    margin: 30px auto 0; /* Відступи та центрування */
+    object-fit: cover; /* Заповнення області з обрізанням */
+    border: 6px solid #fff1f5; /* Рамка зображення */
+    border-radius: 8px; /* Заокруглення кутів */
+    box-shadow: 0 8px 20px rgba(112, 69, 82, 0.18); /* Тінь елемента */
 }
 
 .new-books-page {
-    max-width: 980px;
-    background: #f4d7e2;
+    max-width: 980px; /* Максимальна ширина */
+    background: #f4d7e2; /* Колір фону */
 }
 
 .new-books-page > h1 {
-    margin-bottom: 40px;
-    color: #704552;
+    margin-bottom: 40px; /* Нижній відступ */
+    color: #704552; /* Колір тексту */
 }
 
 .new-book-card {
-    display: grid;
-    grid-template-columns: 1fr 110px;
-    gap: 6px 28px;
-    align-items: center;
-    max-width: 650px;
-    min-height: 155px;
-    margin: 22px auto;
-    padding: 20px 24px;
-    background: #d7b39d;
-    border: 1px solid rgba(112, 69, 82, 0.14);
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(112, 69, 82, 0.1);
-    box-sizing: border-box;
+    max-width: 650px; /* Максимальна ширина */
+    min-height: 155px; /* Мінімальна висота */
+    margin: 22px auto; /* Відступи та центрування */
+    padding: 20px 24px; /* Внутрішні відступи */
+    background: #d7b39d; /* Колір фону */
+    border: 1px solid rgba(112, 69, 82, 0.14); /* Рамка елемента */
+    border-radius: 12px; /* Заокруглення кутів */
+    box-shadow: 0 8px 20px rgba(112, 69, 82, 0.1); /* Тінь елемента */
+    box-sizing: border-box; /* Розміри разом із рамкою */
+    overflow: hidden; /* Вміщення плаваючого зображення */
 }
 
 .new-book-card h2 {
-    margin: 0;
-    color: #673d4b;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 1.35rem;
+    margin: 0; /* Без зовнішніх відступів */
+    color: #673d4b; /* Колір тексту */
+    font-family: Georgia, 'Times New Roman', serif; /* Шрифт заголовка */
+    font-size: 1.35rem; /* Розмір шрифту */
 }
 
 .new-book-card p {
-    margin: 0;
-    color: #674f52;
+    margin: 6px 0 0; /* Верхній відступ */
+    color: #674f52; /* Колір тексту */
 }
 
 .new-book-card img {
-    grid-column: 2;
-    grid-row: 1 / span 3;
-    width: 110px;
-    height: 155px;
-    object-fit: cover;
-    border: 4px solid #fbeaf0;
-    border-radius: 8px;
-    box-shadow: 0 6px 14px rgba(103, 61, 75, 0.22);
-    box-sizing: border-box;
-}
-
-@media (max-width: 520px) {
-    .new-book-card {
-        grid-template-columns: 1fr 90px;
-        gap: 6px 18px;
-        padding: 18px;
-    }
-
-    .new-book-card img {
-        width: 90px;
-        height: 130px;
-    }
+    float: right; /* Розташування праворуч */
+    width: 110px; /* Ширина */
+    height: 155px; /* Висота */
+    margin-left: 28px; /* Відступ від тексту */
+    object-fit: cover; /* Заповнення області з обрізанням */
+    border: 4px solid #fbeaf0; /* Рамка зображення */
+    border-radius: 8px; /* Заокруглення кутів */
+    box-shadow: 0 6px 14px rgba(103, 61, 75, 0.22); /* Тінь елемента */
+    box-sizing: border-box; /* Розміри разом із рамкою */
 }
 
 .book{
-    max-width: 520px;
-    padding: 20px 22px;
-    margin: 20px auto;
-    background-color: #c9a58f;
-    border-radius: 12px;
-    box-sizing: border-box;
-    overflow: hidden;
+    max-width: 520px; /* Максимальна ширина */
+    padding: 20px 22px; /* Внутрішні відступи */
+    margin: 20px auto; /* Відступи та центрування */
+    background-color: #c9a58f; /* Колір фону */
+    border-radius: 12px; /* Заокруглення кутів */
+    box-sizing: border-box; /* Розміри разом із рамкою */
+    overflow: hidden; /* Приховування зайвого вмісту */
 }
 
 .book h2 {
-    margin-top: 0;
+    margin-top: 0; /* Без верхнього відступу */
 }
 
 .book img {
-    float: right;
-    width: 140px;
-    height: auto;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    display: block;
+    float: right; /* Розташування праворуч */
+    width: 140px; /* Ширина */
+    height: auto; /* Автоматична висота */
+    margin-left: 20px; /* Лівий відступ */
+    margin-bottom: 10px; /* Нижній відступ */
+    border-radius: 8px; /* Заокруглення кутів */
+    display: block; /* Блокове відображення */
 }
 
 .book p {
-    margin: 8px 0;
+    margin: 8px 0; /* Вертикальні відступи */
 }
