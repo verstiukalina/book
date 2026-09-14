@@ -50,17 +50,17 @@ body > a:focus-visible {
     transform: translateY(-2px);
 }
 
-body:has(> img[alt="logo"]) {
+.publisher-page {
     max-width: 900px;
     background: #f3d2df;
 }
 
-body:has(> img[alt="logo"]) > h1 {
+.publisher-heading {
     margin-bottom: 28px;
     color: #704552;
 }
 
-body:has(> img[alt="logo"]) > p {
+.publisher-description {
     max-width: 820px;
     padding: 28px 32px;
     color: #5c4144;
@@ -71,7 +71,7 @@ body:has(> img[alt="logo"]) > p {
     text-align: left;
 }
 
-body:has(> img[alt="logo"]) > img {
+.publisher-logo {
     display: block;
     max-width: min(100%, 260px);
     height: auto;
@@ -79,17 +79,17 @@ body:has(> img[alt="logo"]) > img {
     border-radius: 8px;
 }
 
-body:has(> img[alt="avtor"]) {
+.author-page {
     max-width: 900px;
     background: #f4d7e2;
 }
 
-body:has(> img[alt="avtor"]) > h1 {
+.author-heading {
     margin-bottom: 28px;
     color: #704552;
 }
 
-body:has(> img[alt="avtor"]) > p {
+.author-description {
     max-width: 760px;
     margin: 12px auto;
     padding: 16px 24px;
@@ -100,7 +100,7 @@ body:has(> img[alt="avtor"]) > p {
     box-shadow: 0 6px 16px rgba(112, 69, 82, 0.1);
 }
 
-body:has(> img[alt="avtor"]) > p:first-of-type {
+.author-intro {
     color: #673d4b;
     font-family: 'Playfair Display', Georgia, serif;
     font-size: 1.35rem;
@@ -108,7 +108,7 @@ body:has(> img[alt="avtor"]) > p:first-of-type {
     text-align: center;
 }
 
-body:has(> img[alt="avtor"]) > img {
+.author-photo {
     display: block;
     width: min(100%, 280px);
     height: 340px;
