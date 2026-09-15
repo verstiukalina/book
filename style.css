@@ -8,7 +8,8 @@ body {
     line-height: 1.6; /* Міжрядковий інтервал */
 }
 
-body > h1 {
+body > h1,
+body > header > h1 {
     margin: 0 0 36px; /* Зовнішні відступи */
     color: #6f3d50; /* Колір тексту */
     font-family: Georgia, 'Times New Roman', serif; /* Шрифт заголовка */
@@ -16,7 +17,8 @@ body > h1 {
     text-align: center; /* Вирівнювання по центру */
 }
 
-body > p {
+body > p,
+body > header > p {
     max-width: 760px; /* Максимальна ширина */
     margin: 18px auto 6px; /* Відступи та центрування */
     color: #755d66; /* Колір тексту */
@@ -24,7 +26,8 @@ body > p {
     text-align: center; /* Вирівнювання по центру */
 }
 
-body > a {
+body > a,
+body > header > a {
     display: block; /* Блокове відображення */
     width: fit-content; /* Ширина за вмістом */
     margin: 0 auto 28px; /* Відступи та центрування */
@@ -39,7 +42,9 @@ body > a {
 }
 
 body > a:hover,
-body > a:focus-visible {
+body > a:focus-visible,
+body > header > a:hover,
+body > header > a:focus-visible {
     color: #ffffff; /* Колір тексту */
     background: #703b50; /* Колір фону */
     box-shadow: 0 7px 16px rgba(111, 61, 80, 0.22); /* Тінь елемента */
