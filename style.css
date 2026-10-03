@@ -1,160 +1,103 @@
-*,
-*::before,
-*::after {
-    box-sizing: border-box; /* Розрахунок розміру */
+/* Базові стилі */
+* {
+    box-sizing: border-box;
 }
 
 body {
-    max-width: 1120px; /* Максимальна ширина */
-    margin: 0 auto; /* Зовнішні відступи та центрування */
-    padding: 48px 24px 72px; /* Внутрішні відступи */
-    color: #3f3035; /* Колір тексту */
-    background: #f6d6e4; /* Колір фону */
-    font-family: Arial, Helvetica, sans-serif; /* Шрифт тексту */
-    line-height: 1.6; /* Міжрядковий інтервал */
-    overflow-x: hidden; /* Без горизонтальної прокрутки */
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 48px 24px 72px;
+    color: #3f3035;
+    background: #f6d6e4;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
 }
 
-#menu-title {
-    letter-spacing: 0.04em; /* Інтервал між літерами */
-}
+/* Приклади селекторів */
+#menu-title { letter-spacing: 0.04em; }
+[title="Ціна"] { font-weight: 700; }
+[src*=".webp"] { border-bottom-style: double; }
+[lang|="uk"] { hyphens: auto; }
 
-[title="Ціна"] {
-    font-weight: 700; /* Товщина шрифту */
-}
-
-img[src*=".webp"] {
-    border-bottom-style: double; /* Стиль нижньої рамки */
-}
-
-[lang|="uk"] {
-    hyphens: auto; /* Перенесення слів */
-}
-
-body > h1,
-body > header > h1 {
+/* Головне меню */
+.menu-heading,
+.page-heading {
     margin: 0 0 36px;
     color: #6f3d50;
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: Georgia, "Times New Roman", serif;
     line-height: 1.1;
-    text-align: center; /* Вирівнювання тексту */
-}
-
-body > p,
-body > header > p {
-    max-width: 760px;
-    margin: 18px auto 6px;
-    color: #755d66;
-    font-size: 1rem; /* Розмір шрифту */
     text-align: center;
 }
 
-body > header > a {
-    display: block; /* Блокове відображення */
-    width: fit-content; /* Ширина */
+.menu-text {
+    max-width: 760px;
+    margin: 18px auto 6px;
+    color: #755d66;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.menu-link {
+    display: block;
+    width: fit-content;
     margin: 0 auto 28px;
     padding: 9px 22px;
-    color: #ffffff;
+    color: #fff;
     background: #8a4f63;
-    border-radius: 6px; /* Заокруглення кутів */
-    box-shadow: 0 4px 12px rgba(111, 61, 80, 0.16); /* Тінь елемента */
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(111, 61, 80, 0.16);
     font-size: 0.9rem;
     font-weight: 600;
-    text-decoration: none; /* Оформлення тексту */
+    text-decoration: none;
 }
 
-body > header > a:link {
-    color: #ffffff;
-}
-
-body > header > a:visited {
-    background-color: #76505e; /* Колір фону */
-}
-
-body > header > a:hover,
-body > header > a:focus-visible {
-    color: #ffffff;
+.menu-link:link { color: #fff; }
+.menu-link:visited { background: #76505e; }
+.menu-link:hover {
     background: #703b50;
     box-shadow: 0 7px 16px rgba(111, 61, 80, 0.22);
-    transform: translateY(-2px); /* Перетворення елемента */
+    transform: translateY(-2px);
 }
-
-body > header > a:active {
-    transform: translateY(0);
+.menu-link:active { transform: translateY(0); }
+.menu-link:focus {
+    outline: 3px solid #4f2435;
+    outline-offset: 3px;
 }
+.menu-text:first-of-type { margin-top: 0; }
+.menu-link:last-child { margin-bottom: 40px; }
+.menu-title::before { content: "📚 "; }
 
-a:focus,
-a:focus-visible {
-    outline-width: 3px; /* Товщина контуру */
-    outline-style: solid; /* Стиль контуру */
-    outline-color: #4f2435; /* Колір контуру */
-    outline-offset: 3px; /* Відступ контуру */
-}
-
-a[href^="mailto:"] {
-    color: #6f3d50;
-}
-
-a[href^="tel:"] {
-    color: #704552;
-}
-
-header p:first-of-type {
-    margin-top: 0; /* Верхній відступ */
-}
-
-header a:last-child {
-    margin-bottom: 40px; /* Нижній відступ */
-}
-
-[title="Книжкове меню"]::before {
-    content: "📚 "; /* Вставлений вміст */
-}
-
-.publisher-page {
-    max-width: 900px;
-    background: #f3d2df;
-}
-
-.publisher-heading {
+/* Інформаційні сторінки */
+.info-page { max-width: 900px; }
+.pink-page { background: #f4d7e2; }
+.publisher-page { background: #f3d2df; }
+.new-books-page { max-width: 980px; }
+.info-heading {
     margin-bottom: 28px;
     color: #704552;
 }
 
 .publisher-description {
     max-width: 820px;
+    margin: 18px auto 6px;
     padding: 28px 32px;
     color: #5c4144;
     background: #d8b69f;
-    border: 1px solid rgba(112, 69, 82, 0.14); /* Рамка */
+    border: 1px solid rgba(112, 69, 82, 0.14);
     border-radius: 8px;
     box-shadow: 0 8px 20px rgba(112, 69, 82, 0.1);
     text-align: left;
-    white-space: pre-line; /* Обробка пробілів */
+    white-space: pre-line;
 }
 
-.publisher-description::first-line {
-    color: #6f3d50;
-    font-weight: 700;
-}
-
-.publisher-logo {
+.publisher-description::first-line { color: #6f3d50; font-weight: 700; }
+.centered-image {
     display: block;
-    max-width: min(100%, 260px);
-    height: auto; /* Висота */
-    margin: 32px auto 0;
+    margin-right: auto;
+    margin-left: auto;
     border-radius: 8px;
 }
-
-.author-page {
-    max-width: 900px;
-    background: #f4d7e2;
-}
-
-.author-heading {
-    margin-bottom: 28px;
-    color: #704552;
-}
+.publisher-logo { max-width: min(100%, 260px); margin-top: 32px; }
 
 .author-description {
     max-width: 760px;
@@ -162,194 +105,102 @@ header a:last-child {
     padding: 16px 24px;
     color: #5c4144;
     background: #d7b39d;
-    border-left: 4px solid #8a4f63; /* Ліва рамка */
+    border-left: 4px solid #8a4f63;
     border-radius: 6px;
     box-shadow: 0 6px 16px rgba(112, 69, 82, 0.1);
 }
 
-.author-description:first-of-type {
-    border-left-width: thick; /* Товщина лівої рамки */
-}
-
-.author-intro {
+.author-intro,
+.card h2,
+.book h1 {
     color: #673d4b;
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: Georgia, "Times New Roman", serif;
+}
+.author-intro {
     font-size: 1.35rem;
     font-weight: 700;
     text-align: center;
 }
-
 .author-photo {
-    display: block;
     width: min(100%, 280px);
     height: 340px;
-    margin: 30px auto 0;
-    object-fit: cover; /* Масштабування вмісту */
+    margin-top: 30px;
+    object-fit: cover;
     border: 6px solid #fff1f5;
-    border-radius: 8px;
     box-shadow: 0 8px 20px rgba(112, 69, 82, 0.18);
 }
+.contact-info { margin-top: 28px; }
+.contact-info a { color: #6f3d50; }
 
-#contact-info {
-    margin-top: 28px;
-}
-
-.new-books-page {
-    max-width: 980px;
-    background: #f4d7e2;
-}
-
+/* Єдиний дочірній селектор */
 .new-books-page > h1 {
     margin-bottom: 40px;
     color: #704552;
 }
 
+/* Картки книг */
+.card { overflow: hidden; border-radius: 12px; }
 .new-book-card {
     max-width: 650px;
-    min-height: 155px; /* Мінімальна висота */
+    min-height: 155px;
     margin: 22px auto;
     padding: 20px 24px;
-    background: #d7b39d;
+    background: #d7b39d linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent);
     border: 1px solid rgba(112, 69, 82, 0.14);
-    border-radius: 12px;
     box-shadow: 0 8px 20px rgba(112, 69, 82, 0.1);
-    overflow: hidden; /* Переповнення */
-    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.14), transparent); /* Фонове зображення */
 }
-
-.new-book-card:first-of-type {
-    border-top-width: thin; /* Товщина верхньої рамки */
-    border-top-style: double; /* Стиль верхньої рамки */
-    border-top-color: #8a4f63; /* Колір верхньої рамки */
+.new-book-card h2 { margin: 0; font-size: 1.35rem; }
+.new-book-card p { margin: 6px 0 0; color: #674f52; }
+.card img {
+    display: block;
+    float: right;
+    object-fit: cover;
+    border-radius: 8px;
 }
-
-.new-book-card h2 {
-    margin: 0;
-    color: #673d4b;
-    font-family: Georgia, 'Times New Roman', serif;
-    font-size: 1.35rem;
-}
-
-.new-book-card p {
-    margin: 6px 0 0;
-    color: #674f52;
-}
-
 .new-book-card img {
-    float: right; /* Обтікання */
     width: 110px;
     height: 155px;
-    margin-left: 28px; /* Лівий відступ */
-    object-fit: cover;
+    margin-left: 28px;
     border: 4px solid #fbeaf0;
-    border-radius: 8px;
     box-shadow: 0 6px 14px rgba(103, 61, 75, 0.22);
 }
 
-.book{
+.book {
     max-width: 520px;
-    padding: 20px 22px;
     margin: 20px auto;
-    background-color: #c9a58f;
-    border-radius: 12px;
-    overflow: hidden;
-    border-left-width: thick;
-    border-left-style: solid; /* Стиль лівої рамки */
-    border-left-color: #8a4f63; /* Колір лівої рамки */
-    border-right-width: thin; /* Товщина правої рамки */
-    border-right-style: outset; /* Стиль правої рамки */
-    border-right-color: #b98598; /* Колір правої рамки */
-    border-top-width: thin;
-    border-top-style: double;
-    border-top-color: #8a4f63;
-    border-bottom-width: thick; /* Товщина нижньої рамки */
-    border-bottom-style: groove;
-    border-bottom-color: #b98598; /* Колір нижньої рамки */
+    padding: 20px 22px;
+    background: #c9a58f;
+    border-width: thin thin thick thick;
+    border-style: double outset groove solid;
+    border-color: #8a4f63 #b98598 #b98598 #8a4f63;
 }
 
-.book > h1,
-.book > h2 {
-    color: #673d4b;
-    font-family: Georgia, 'Times New Roman', serif;
-    line-height: normal;
+.book h1,
+.book h2 { line-height: normal; }
+.book h2 {
+    position: relative;
+    margin-top: 0;
+    padding-top: 1.1rem;
 }
-
-.book > h2 {
-    position: relative; /* Позиціонування */
-    padding-top: 1.1rem; /* Верхній внутрішній відступ */
-}
-
-.book > h2::before {
+.book h2::before {
     content: "Книга: ";
     position: absolute;
-    top: 0; /* Позиція зверху */
-    left: 0; /* Позиція зліва */
+    top: 0;
+    left: 0;
     color: #7b4a5c;
     font-size: 0.72em;
 }
-
-.book h2 {
-    margin-top: 0;
-}
-
-.book img {
-    float: right;
-    width: 140px;
-    height: auto;
-    margin-left: 20px;
-    margin-bottom: 10px;
-    border-radius: 8px;
-    display: block;
-}
-
-.book p {
-    margin: 8px 0;
-}
-
-.book > p:first-of-type {
-    color: #5f3e49;
-}
-
-.book > p:first-of-type::first-line {
-    font-weight: 600;
-}
-
-.book var,
-.new-book-card var {
-    display: inline;
+.book img { width: 140px; margin: 0 0 10px 20px; }
+.book p { margin: 8px 0; }
+.card var {
     color: #6b263f;
-    font-style: normal; /* Стиль шрифту */
+    font-style: normal;
     font-weight: 700;
 }
-
-abbr[title] {
-    cursor: help; /* Вигляд курсора */
+.publisher {
+    cursor: help;
     text-decoration: underline dotted;
-    vertical-align: text-top; /* Вертикальне вирівнювання */
 }
 
-q::before {
-    content: "«";
-}
-
-q::after {
-    content: "»";
-}
-
-@media (max-width: 600px) {
-    body {
-        padding: 28px 14px 48px;
-    }
-
-    .book,
-    .new-book-card {
-        padding: 16px;
-    }
-
-    .book img,
-    .new-book-card img {
-        float: none;
-        max-width: 100%;
-        margin: 18px auto 0;
-    }
-}
+q::before { content: "«"; }
+q::after { content: "»"; }
