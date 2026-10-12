@@ -8,10 +8,6 @@ body {
     line-height: 1.6;
 }
 
-[title="Ціна"] {
-    font-weight: 700;
-}
-
 [src*=".webp"] {
     border-bottom-style: double;
 }
@@ -54,7 +50,6 @@ a[href^="tel:"] {
     color: #fff;
     background: #8a4f63;
     border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(111, 61, 80, 0.16);
     font-size: 0.9rem;
     font-weight: 600;
     text-decoration: none;
@@ -120,7 +115,6 @@ a:focus-visible {
     color: #5c4144;
     background: #d7b39d;
     border-radius: 8px;
-    box-shadow: 0 8px 20px rgba(112, 69, 82, 0.1);
 }
 
 .publisher-description {
@@ -171,7 +165,6 @@ a:focus-visible {
     height: 340px;
     object-fit: cover;
     border: 6px solid #fff1f5;
-    box-shadow: 0 8px 20px rgba(112, 69, 82, 0.18);
 }
 
 .contact-info {
@@ -191,12 +184,10 @@ a:focus-visible {
 
 .new-book-card {
     max-width: 650px;
-    min-height: 155px;
     margin: 22px auto;
     padding: 20px 24px;
     background: #d7b39d;
     border: 1px solid rgba(112, 69, 82, 0.14);
-    box-shadow: 0 8px 20px rgba(112, 69, 82, 0.1);
 }
 
 .new-book-card h2 {
@@ -221,7 +212,6 @@ a:focus-visible {
     height: 155px;
     margin-left: 28px;
     border: 4px solid #fbeaf0;
-    box-shadow: 0 6px 14px rgba(103, 61, 75, 0.22);
 }
 
 .book {
@@ -240,18 +230,7 @@ a:focus-visible {
 }
 
 .book h2 {
-    position: relative;
     margin-top: 0;
-    padding-top: 1.1rem;
-}
-
-.book h2::before {
-    content: "Книга: ";
-    position: absolute;
-    top: 0;
-    left: 0;
-    color: #7b4a5c;
-    font-size: 0.72em;
 }
 
 .book img {
