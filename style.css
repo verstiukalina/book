@@ -248,3 +248,38 @@ a:focus-visible {
     font-weight: 700;
 }
 
+/* Сторінки нової лабораторної роботи */
+.lab-page {
+    max-width: 760px;
+}
+
+.lab-page a {
+    color: #6f3d50;
+}
+
+.lab-page .menu-link {
+    color: #fff;
+}
+
+.site-menu {
+    padding-left: 24px;
+    list-style-type: disc;
+}
+
+.site-menu li {
+    margin-bottom: 10px;
+}
+
+.services {
+    list-style-type: square;
+}
+
+.terms dt {
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+.terms dd {
+    margin-left: 24px;
+}
+
