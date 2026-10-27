@@ -11,16 +11,19 @@
     <h1 class="page-heading">Асортимент книгарні «Книжкова полиця»</h1>
     <p>Навчальний каталог: ціни, залишки та знижки вигадані. Ціни вказані до знижки.</p>
     <div class="table-scroll" role="region" aria-label="Таблиця асортименту" tabindex="0">
-        <table class="books-table">
-            <caption>Асортимент книг — варіант №4</caption>
+        <table class="books-table" dir="ltr" bgcolor="#fff1f5" summary="Асортимент книг із цінами, залишками та знижками" frame="box">
+            <caption id="catalog-caption" title="Каталог книгарні">Асортимент книг — варіант №4</caption>
+            <colgroup class="book-columns" lang="uk">
+                <col span="6">
+            </colgroup>
             <thead>
                 <tr>
                     <th rowspan="3" scope="col">Жанр</th>
-                    <th colspan="4">Товари книгарні</th>
+                    <th colspan="4" id="products">Товари книгарні</th>
                     <th rowspan="3" scope="col">Знижка</th>
                 </tr>
                 <tr>
-                    <th rowspan="2" scope="col">Назва книги</th>
+                    <th rowspan="2" scope="col" dir="ltr" bgcolor="#d7b39d" headers="products">Назва книги</th>
                     <th rowspan="2" scope="col">Автор</th>
                     <th colspan="2">Продаж</th>
                 </tr>
@@ -30,7 +33,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr charoff="50" class="catalog-row" style="height: 42px;" title="Книги жанру роман">
                     <td rowspan="3">Роман</td>
                     <td>Усі твої досконалості</td><td>Коллін Гувер</td><td>450</td><td>12</td>
                     <td>0%</td>
@@ -55,7 +58,7 @@
                 </tr>
                 <tr>
                     <td rowspan="3">Містика</td>
-                    <td colspan="4">Добірка історій із загадками та несподіваними подіями</td>
+                    <td colspan="4" style="font-style: italic;" title="Добірка книгарні" lang="uk">Добірка історій із загадками та несподіваними подіями</td>
                 </tr>
                 <tr>
                     <td>Веріті</td><td>Коллін Гувер</td><td>450</td><td>11</td>
@@ -69,6 +72,11 @@
                     <td>Без Меріт</td><td>Коллін Гувер</td><td>450</td><td>14</td>
                 </tr>
             </tbody>
+            <tfoot style="font-weight: bold;" dir="ltr" align="center" valign="middle" id="catalog-total">
+                <tr>
+                    <td colspan="6">Разом: 9 назв книг, 92 примірники</td>
+                </tr>
+            </tfoot>
         </table>
     </div>
 </body>
