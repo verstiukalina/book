@@ -273,3 +273,25 @@ a:focus-visible {
 
 .books-table th { background: #d7b39d; }
 
+/* Анкета читача */
+.reader-page { max-width: 600px; }
+
+.reader-page fieldset {
+    min-width: 0;
+    margin-bottom: 16px;
+    border: 1px solid #8a4f63;
+}
+
+.reader-page label { display: block; }
+
+.reader-page input,
+.reader-page select,
+.reader-page textarea,
+.reader-page button {
+    max-width: 100%;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+.reader-page textarea { resize: vertical; }
+

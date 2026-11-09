@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анкета читача — Книжкова полиця</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="reader-page">
+    <a class="menu-link" href="menu.html">До меню</a>
+    <h1 class="page-heading">Анкета читача</h1>
+
+    <form action="index.html">
+        <p>
+            <input type="image" src="catalog-button.svg" height="36" alt="Відкрити каталог у новій вкладці" formtarget="_blank" formenctype="application/x-www-form-urlencoded" formmethod="get">
+        </p>
+    </form>
+
+    <form id="reader-form" lang="uk" style="max-width: 560px;" accept-charset="UTF-8" target="_self" autocomplete="on" enctype="multipart/form-data">
+        <fieldset>
+            <legend id="reader-legend" style="font-weight: bold;" dir="ltr">Про читача</legend>
+            <p>
+                <label class="field-label" for="reader-name" form="reader-form" title="Ім’я читача">Ім’я (обов’язково)</label>
+                <input id="reader-name" name="reader_name" autofocus title="Введіть своє ім’я" autocomplete="given-name" required maxlength="50">
+            </p>
+            <p>
+                <label for="email">Електронна пошта</label>
+                <input id="email" name="email" type="email">
+            </p>
+            <p>
+                <label for="phone">Телефон</label>
+                <input id="phone" name="phone" type="tel">
+            </p>
+            <p>
+                <label for="blog">Посилання на ваш книжковий блог</label>
+                <input id="blog" name="blog" type="url">
+            </p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Книжкові вподобання</legend>
+            <p>
+                <label for="book">Улюблена книга</label>
+                <input id="book" name="book" list="book-titles">
+                <datalist id="book-titles" dir="ltr" style="color: #3f3035;" title="Книги Коллін Гувер">
+                    <option value="Усі твої досконалості"></option>
+                    <option value="Спогади про нього"></option>
+                    <option value="Веріті"></option>
+                </datalist>
+            </p>
+            <p>
+                <label for="genre">Улюблений жанр</label>
+                <select id="genre" name="genre">
+                    <optgroup label="Художня література">
+                        <option>Роман</option>
+                        <option>Драма</option>
+                        <option>Містика</option>
+                    </optgroup>
+                    <optgroup label="Незабаром у книгарні" title="Поки недоступні" disabled lang="uk">
+                        <option>Поезія</option>
+                    </optgroup>
+                </select>
+            </p>
+            <p>
+                <label for="reading-month">Місяць початку читання</label>
+                <input id="reading-month" name="reading_month" type="month" step="1">
+            </p>
+            <p>
+                <label for="reading-week">Тиждень відвідування книгарні</label>
+                <input id="reading-week" name="reading_week" type="week">
+            </p>
+            <p>
+                <label for="photos">Фото улюблених книг (можна кілька)</label>
+                <input id="photos" name="photos" type="file" multiple>
+            </p>
+            <p>
+                <label><input name="news" type="checkbox"> Хочу дізнаватися про новинки</label>
+            </p>
+        </fieldset>
+
+        <details dir="ltr" open id="reader-info">
+            <summary>Інформація для читача</summary>
+            <p>
+                <label for="reading-example">Прочитано 3 з 10 книг</label>
+                <meter id="reading-example" style="width: 180px;" lang="uk" class="reading-meter" max="10" low="2" value="3">3 з 10</meter>
+            </p>
+            <p>
+                <label for="reply">Відповідь книгарні</label>
+                <textarea id="reply" name="reply" wrap="soft" form="reader-form" title="Поле для відповіді книгарні" placeholder="Очікуйте на відповідь" cols="35" disabled></textarea>
+            </p>
+            <!-- Застарілий тег із завдання; сучасні браузери не генерують ним ключі. -->
+            <keygen style="display: block;" dir="ltr" keytype="rsa" challenge="reader-demo" lang="uk">
+        </details>
+
+        <p>
+            <button autofocus value="send" formmethod="get" type="submit">Надіслати анкету</button>
+        </p>
+    </form>
+</body>
+</html>
