@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Книжковий клуб</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            max-width: 600px;
+            font-family: 'Lucida Sans Unicode', sans-serif;
+            font-size: 16px;
+            font-size-adjust: 0.5;
+            font-style: normal;
+        }
+        h1 {
+            font-family: 'Arial Narrow Bold', sans-serif;
+            font-weight: 800;
+            font-stretch: extra-condensed;
+            text-transform: capitalize;
+            letter-spacing: 0.03em;
+        }
+        p {
+            font-weight: lighter;
+            text-indent: 3%;
+        }
+        strong {
+            font-family: 'Gill Sans', sans-serif;
+            font-variant: small-caps;
+            font-stretch: extra-expanded;
+        }
+        code {
+            font-family: monospace;
+            white-space: pre;
+        }
+        a {
+            font: menu;
+            text-decoration: underline;
+        }
+        @media print {
+            @page {
+                size: landscape;
+                marks: none;
+            }
+            article {
+                page: auto;
+                page-break-after: always;
+            }
+            p { widows: 2; orphans: 2; }
+        }
+    </style>
+</head>
+<body>
+    <article>
+        <h1>читаємо разом</h1>
+        <p>Книжковий клуб «Книжкова полиця» запрошує читати роман <strong>«Усі твої досконалості»</strong> Коллін Гувер. На зустрічі обговоримо героїв і поділимося враженнями. Позначка нашого клубу — <code>BOOK</code>.</p>
+        <a href="menu.html">До меню</a>
+    </article>
+</body>
+</html>
