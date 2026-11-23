@@ -6,9 +6,16 @@
     <meta name="description" content="Книжкове меню">
     <meta name="keywords" content="книги, меню, видавництво, РМ, Коллін Гувер">
     <link rel="stylesheet" href="style.css">
+    <style media="print">
+        #catalog-status, #author-status { display: none; }
+    </style>
     <title>Книжкове меню — книги Коллін Гувер</title>
 </head>
-<body>
+<body onload="showCatalogStatus('Каталог завантажено. ' + (navigator.onLine ? 'Ви в мережі.' : 'Ви офлайн.'))"
+      onoffline="showCatalogStatus('Ви офлайн.')"
+      ononline="showCatalogStatus('З’єднання з мережею відновлено.')"
+      onbeforeprint="showCatalogStatus('Каталог готується до друку.')"
+      onafterprint="showCatalogStatus('Перегляд для друку завершено.')">
     <a class="menu-link" href="menu.html">До меню</a>
     <header>
         <h1 class="menu-heading"><tt title="Книжкове меню" id="menu-title" class="menu-title">Книжкове меню</tt></h1>
@@ -19,19 +26,30 @@
         <p class="menu-text"> <code title="Новинки видавництва" id="new-releases">Новинки видавництва</code> </p>
         <a class="menu-link" href="new.html">відкрити</a>
     </header>
+    <p id="catalog-status" class="menu-text" role="status"></p>
     <section class="card book">
-        <h1>Коллін Гувер</h1>
-        <p>Коллін Гувер – авторка, яка майстерно поєднує драму, романтику та несподівані сюжетні повороти, створюючи історії, що залишають глибокий слід у серці кожного читача.</p>
-       <br style="font-size: 1.25em;" id="br1" class="br-author">
-        <p>Її твори, такі як "9 листопада", "Веріті", "Покинь, якщо кохаєш", "Залишся, якщо кохаєш…" та "Без Меріт", розкривають складність людських почуттів, змушуючи замислитися над життєвими виборами та їхніми наслідками.</p>
-        <br style="font-size: 1.25em;" id="br2" class="br-author">
-        <p>Книжковий інтернет-магазин пропонує українським читачам ці та інші романи Коллін Гувер у високоякісному перекладі та з вишуканим оформленням.</p>
-       <br style="font-size: 1.25em;" id="br3" class="br-author">
-        <p>Кожна книга – це не лише <i>захоплива історія</i>, а й стильне доповнення до вашої бібліотеки.</p>
-        <p>«Книга відкриває двері до нових світів.»</p>
-       <br style="font-size: 1.25em;" id="br4" class="br-author">
-        <p>Якщо ви прагнете поринути у світ глибоких емоцій та незабутніх сюжетів, твори Коллін Гувер стануть чудовим вибором для вашого наступного читання.</p>
-        <img src="images (3).jpeg" alt="book">
+        <h1 class="author-heading"
+            onmouseover="setAuthorHeadingState(this, 'hover', 'Натисніть, щоб згорнути або розгорнути опис авторки.')"
+            onmouseout="setAuthorHeadingState(this, '', 'Виділення заголовка знято.')"
+            onmousedown="setAuthorHeadingState(this, 'pressed', 'Заголовок натиснуто.')"
+            onmouseup="setAuthorHeadingState(this, 'hover', 'Кнопку миші відпущено.')"
+            onclick="toggleAuthorBio(this.querySelector('button'))">
+            <button type="button" aria-expanded="true" aria-controls="author-bio">Коллін Гувер</button>
+        </h1>
+        <div id="author-status" role="status"></div>
+        <div id="author-bio">
+            <p>Коллін Гувер – авторка, яка майстерно поєднує драму, романтику та несподівані сюжетні повороти, створюючи історії, що залишають глибокий слід у серці кожного читача.</p>
+            <br style="font-size: 1.25em;" id="br1" class="br-author">
+            <p>Її твори, такі як "9 листопада", "Веріті", "Покинь, якщо кохаєш", "Залишся, якщо кохаєш…" та "Без Меріт", розкривають складність людських почуттів, змушуючи замислитися над життєвими виборами та їхніми наслідками.</p>
+            <br style="font-size: 1.25em;" id="br2" class="br-author">
+            <p>Книжковий інтернет-магазин пропонує українським читачам ці та інші романи Коллін Гувер у високоякісному перекладі та з вишуканим оформленням.</p>
+            <br style="font-size: 1.25em;" id="br3" class="br-author">
+            <p>Кожна книга – це не лише <i>захоплива історія</i>, а й стильне доповнення до вашої бібліотеки.</p>
+            <p>«Книга відкриває двері до нових світів.»</p>
+            <br style="font-size: 1.25em;" id="br4" class="br-author">
+            <p>Якщо ви прагнете поринути у світ глибоких емоцій та незабутніх сюжетів, твори Коллін Гувер стануть чудовим вибором для вашого наступного читання.</p>
+            <img src="images (3).jpeg" alt="book">
+        </div>
     </section>
     <div class="card book">
         <h2>Усі твої досконалості</h2>
@@ -40,7 +58,7 @@
         <p>385 сторінок</p>
         <p>жанр:роман</p>
         <p>ціна: <var>450</var> грн</p>
-        <img src="74-500x500.jpg" alt="book">
+        <img class="book-cover" src="74-500x500.jpg" alt="book">
     </div>
      <div class="card book">
         <h2>Cпрогади про нього</h2>
@@ -49,7 +67,7 @@
         <p>348 сторінок</p>
         <p>жанр:роман</p>
         <p>ціна: <var>450</var> грн</p>
-        <img src="spogadysite-1500x2250.png" alt="book">
+        <img class="book-cover" src="spogadysite-1500x2250.png" alt="book">
     </div>
     <div class="card book">
         <h2>Огидне кохання</h2>
@@ -58,7 +76,7 @@
         <p>285 сторінок</p>
         <p>жанр:роман</p>
         <p>ціна: <var>500</var> грн</p>
-        <img src="images.jpeg" alt="book">
+        <img class="book-cover" src="images.jpeg" alt="book">
     </div>
     <div class="card book">
         <h2>Покинь якщо кохаєш</h2>
@@ -141,5 +159,29 @@
         <p>ціна: <var>500</var> грн</p>
         <img src="582135912.webp" alt="book">
     </div>
+    <script>
+        function showCatalogStatus(message) {
+            document.getElementById('catalog-status').textContent = message;
+        }
+
+        const authorStatus = document.getElementById('author-status');
+
+        function setAuthorHeadingState(heading, state, message) {
+            heading.dataset.state = state;
+            authorStatus.textContent = message;
+        }
+
+        function toggleAuthorBio(button) {
+            const bio = document.getElementById('author-bio');
+            bio.hidden = !bio.hidden;
+            button.setAttribute('aria-expanded', String(!bio.hidden));
+            authorStatus.textContent = bio.hidden ? 'Опис авторки згорнуто.' : 'Опис авторки розгорнуто.';
+        }
+
+        for (const cover of document.querySelectorAll('.book-cover')) {
+            cover.onmouseover = () => cover.classList.add('is-highlighted');
+            cover.onmouseout = () => cover.classList.remove('is-highlighted');
+        }
+    </script>
 </body>
 </html>

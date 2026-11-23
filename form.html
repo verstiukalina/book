@@ -95,5 +95,62 @@
             <button autofocus value="send" formmethod="get" type="submit">Надіслати анкету</button>
         </p>
     </form>
+
+    <form onsubmit="showPageAccessTime(event)">
+        <fieldset>
+            <legend>Завдання 3.4</legend>
+            <p><button type="submit">Run Task</button></p>
+            <p>
+                <label for="page-access-time">Дата й час відкриття сторінки</label>
+                <textarea id="page-access-time" name="pageAccessTime" rows="2" cols="30" readonly></textarea>
+            </p>
+        </fieldset>
+    </form>
+
+    <form onsubmit="findIntegers(event)">
+        <fieldset>
+            <legend>Завдання 5.4. Пошук цілих чисел</legend>
+            <p>
+                <label for="integer-source">Вхідний текст</label>
+                <textarea id="integer-source" name="integerSource" rows="4" cols="40"></textarea>
+            </p>
+            <p><button type="submit">Пошук інформації</button></p>
+            <output name="integerResult" for="integer-source"></output>
+        </fieldset>
+    </form>
+
+    <form onsubmit="showNegativeNumbers(event)">
+        <fieldset>
+            <legend>Завдання 6.4. Від’ємні елементи масиву</legend>
+            <p><button type="submit">Array Task</button></p>
+            <p>
+                <label for="array-result">Масиви A і B</label>
+                <textarea id="array-result" name="arrayResult" rows="2" cols="30" readonly></textarea>
+            </p>
+        </fieldset>
+    </form>
+
+    <script>
+        function showPageAccessTime(event) {
+            event.preventDefault();
+            const openedAt = new Date(performance.timeOrigin);
+            event.currentTarget.elements.pageAccessTime.value = openedAt.toLocaleString('uk-UA');
+        }
+
+        function findIntegers(event) {
+            event.preventDefault();
+            const { integerSource, integerResult } = event.currentTarget.elements;
+            const parts = integerSource.value.split(/[\s;:!?()[\]{}"'«»/]+|[.,](?!\d)/);
+            const numbers = parts.filter(part => /^[+-]?\d+$/.test(part));
+            integerResult.value = numbers.length ? `Цілі числа — ${numbers.join(', ')}` : 'Цілих чисел не знайдено.';
+        }
+
+        function showNegativeNumbers(event) {
+            event.preventDefault();
+            const a = [5, -3, 0, -8, 2];
+            const b = a.filter(number => number < 0);
+            event.currentTarget.elements.arrayResult.value = `A = [${a.join(', ')}]\nB = [${b.join(', ')}]`;
+        }
+    </script>
 </body>
 </html>

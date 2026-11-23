@@ -233,9 +233,51 @@ a:focus-visible {
     margin-top: 0;
 }
 
+.author-heading {
+    width: fit-content;
+}
+
+.author-heading button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.author-heading button::after {
+    content: "";
+    display: inline-block;
+    width: 0.3em;
+    height: 0.3em;
+    margin-left: 0.35em;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    vertical-align: 0.15em;
+    transform: rotate(45deg);
+}
+
+.author-heading button[aria-expanded="false"]::after {
+    transform: rotate(-45deg);
+}
+
+.author-heading[data-state="hover"] button {
+    text-decoration: underline;
+}
+
+.author-heading[data-state="pressed"] button {
+    background: #f6d6e4;
+}
+
 .book img {
     width: 140px;
     margin: 0 0 10px 20px;
+}
+
+.book-cover.is-highlighted {
+    outline: 3px solid #8a4f63;
 }
 
 .book p {
