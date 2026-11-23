@@ -96,7 +96,8 @@
         </p>
     </form>
 
-    <form onsubmit="showPageAccessTime(event)">
+    <!-- 3.4 - форма -->
+    <form onsubmit="chasVidkryttia(event)">
         <fieldset>
             <legend>Завдання 3.4</legend>
             <p><button type="submit">Run Task</button></p>
@@ -107,7 +108,8 @@
         </fieldset>
     </form>
 
-    <form onsubmit="findIntegers(event)">
+    <!-- 5.4 - форма -->
+    <form onsubmit="tsiliChysla(event)">
         <fieldset>
             <legend>Завдання 5.4. Пошук цілих чисел</legend>
             <p>
@@ -119,7 +121,8 @@
         </fieldset>
     </form>
 
-    <form onsubmit="showNegativeNumbers(event)">
+    <!-- 6.4 - форма -->
+    <form onsubmit="vidiemniChysla(event)">
         <fieldset>
             <legend>Завдання 6.4. Від’ємні елементи масиву</legend>
             <p><button type="submit">Array Task</button></p>
@@ -131,21 +134,24 @@
     </form>
 
     <script>
-        function showPageAccessTime(event) {
+        // 3.4 - функція
+        function chasVidkryttia(event) {
             event.preventDefault();
             const openedAt = new Date(performance.timeOrigin);
             event.currentTarget.elements.pageAccessTime.value = openedAt.toLocaleString('uk-UA');
         }
 
-        function findIntegers(event) {
+        // 5.4 - функція
+        function tsiliChysla(event) {
             event.preventDefault();
             const { integerSource, integerResult } = event.currentTarget.elements;
-            const parts = integerSource.value.split(/[\s;:!?()[\]{}"'«»/]+|[.,](?!\d)/);
+            const parts = integerSource.value.split(' ');
             const numbers = parts.filter(part => /^[+-]?\d+$/.test(part));
             integerResult.value = numbers.length ? `Цілі числа — ${numbers.join(', ')}` : 'Цілих чисел не знайдено.';
         }
 
-        function showNegativeNumbers(event) {
+        // 6.4 - функція
+        function vidiemniChysla(event) {
             event.preventDefault();
             const a = [5, -3, 0, -8, 2];
             const b = a.filter(number => number < 0);
